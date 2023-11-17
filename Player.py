@@ -1,4 +1,4 @@
-from initinput import intinput
+from intinput import intinput
 
 class Player:
     def __init__(self, name):
