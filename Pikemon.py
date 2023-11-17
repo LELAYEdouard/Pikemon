@@ -38,7 +38,7 @@ class Pikemon:
                     x = round(elt[1]*(1+self.lvl/10))
                     self.tiredness-=elt[2]
                     if self.tiredness>100:
-                        print(f"{self.name}is not tired anymore!\n")
+                        print(f"{self.name} is not tired anymore!\n")
                         self.tiredness=100
                     return x
                 else: 
