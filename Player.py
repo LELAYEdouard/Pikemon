@@ -1,3 +1,5 @@
+from initinput import intinput
+
 class Player:
     def __init__(self, name):
         self.deck = []
@@ -19,7 +21,7 @@ class Player:
                     for i in range(len(self.deck)):
                         print(f"{self.deck[i]}(lvl {self.deck[i].lvl()}): {i+1} ")
 
-                    choice = int(input("choice: "))-1
+                    choice = intinput("choice: ")-1
                     
                     if choice < len(self.deck):
                         self.deck.pop(choice)
@@ -38,3 +40,11 @@ class Player:
     
     def __repr__(self):
         return self.getName()
+    
+    def BestPiklvl(self):
+        max_lvl=0
+        for i in range(len(self.deck)):
+            if self.getPikemon(i).lvl>max_lvl:
+                max_pik=self.getPikemon(i)
+                max_lvl=max_pik.lvl
+        return max_lvl

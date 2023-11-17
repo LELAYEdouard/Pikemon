@@ -33,17 +33,19 @@ class Pikemon:
 
     def Attack(self,attack_name):
         for elt in self.attack:
-            if attack_name == elt[0]:
+            if elt[0] == attack_name  :
                 if self.tiredness > elt[2]: 
                     x = round(elt[1]*(1+self.lvl/10))
                     self.tiredness-=elt[2]
                     return x
                 else: 
-                    print("too tired, dogde to regain tire points\n")
-                    return
+                    print("too tired, dodge to regain tire points\n")
+                    return 0
 
     def resetHP(self):
         self.hp = floor((2*(self.base+self.iv)*self.lvl)/50)+self.lvl+100
     
     def __repr__(self):
         return self.getName()
+    
+    
