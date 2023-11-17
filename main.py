@@ -29,7 +29,7 @@ while x:
         player_pik = select_pik(player)
         win = fight(player_pik,npc_pik)
         player_pik.resetHP()
-        
+        npc_pik.resetHP()
         if win == True:
             player_pik.TakeXP(5)
             capture(player,npc_pik)
