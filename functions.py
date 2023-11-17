@@ -2,7 +2,7 @@ from random import randint
 from pikemon import Pikemon
 from player import Player
 from entities import initpik, reducers
-from initinput import intinput
+from intinput import intinput
 
 def attack(a: Pikemon, b: Pikemon, coef: float, nb: int, dodge: bool):
     hit = randint(0,100) + a.tiredness
